@@ -18,7 +18,6 @@
       <Botao mensagem="Filtrar" :style="'background: #3CB371'"/>
     </ContainerBotoes>
     <ModalNovo title="Nova Atividade"  v-show="mostrarModal"/>
-    <Paginacao />
 
     <table class="tabela" margin="10">
         
@@ -50,6 +49,8 @@ export default {
     ContainerBotoes,
     Paginacao,
     Input,
+    ItemTable,
+    TituloTable,
   },
   data() {
     return {
@@ -64,8 +65,6 @@ export default {
     
     },
 
-    ItemTable,
-    TituloTable,
   }
 
 </script>
