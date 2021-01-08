@@ -9,6 +9,7 @@
 </template>
 
 <script>
+
 export default {
   
     Props:{
@@ -16,7 +17,9 @@ export default {
             type: Boolean,
         default: false,
             },  
-        tituloContent: String
+        title: {
+            type: String
+        },
     },
     data(){
 return{

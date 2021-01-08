@@ -4,12 +4,18 @@
       <td>{{cpf}}</td>
       <td>{{data}}</td>
       <td>{{atividade}}</td>
-      <td>{{status}}</td>
+      <td v-if="status">
+        <Select />
+      </td>
     </tr>
 </template>
 
 <script>
+import Select from '@/components/Vselect.vue' 
 export default {
+  components:{
+    Select,
+  },
 
 	props: {
 		paciente: {
@@ -29,7 +35,7 @@ export default {
       required: true,
     },
     status: {
-			type: String,
+			type: Boolean,
 			required: true,
 		},
 	},
