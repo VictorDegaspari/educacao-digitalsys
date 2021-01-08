@@ -27,7 +27,11 @@
          <ItemTable paciente="Kael - The Invoker" cpf="09393675996" data="08/01/21" atividade="Verificar com o paciente se o remedio fez efeito" status="aberto"/>
          <ItemTable paciente="Kael - The Invoker" cpf="09393675996" data="08/01/21" atividade="Verificar com o paciente se o remedio fez efeito" status="aberto"/>
     </table>
-    <Modal v-show="mostrarModal"/>
+    <Modal tituloContent="alo" v-show="mostrarModal">
+      <Input type="text" placeholder="CPF do Paciente"/>
+      <Input type="text" placeholder="Nome"/>
+      <Botao mensagem="Cadastrar" :style="'background: #3CB371'"/>      
+      </Modal>
     <Paginacao/>
   </div>
 
@@ -56,7 +60,7 @@ export default {
   data() {
     return {
       mostrarModal: false,
-      title : String
+      tituloContent : String
       };
   },
   methods: {

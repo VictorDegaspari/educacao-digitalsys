@@ -1,7 +1,7 @@
 <template>
   <div class="geral" v-show="mostrarModal">
         <div class="modal"> 
-          <div class="titles"><p>{{ title }}</p> <button >X</button>
+          <div class="titles"><p>Novo Paciente</p> <button class="close-modal">X</button>
             </div>
             <slot/>
         </div>
@@ -16,7 +16,7 @@ export default {
             type: Boolean,
         default: false,
             },  
-        title: String
+        tituloContent: String
     },
     data(){
 return{
@@ -33,6 +33,11 @@ return{
 <style scoped>
 p{
     color: black;
+}
+.close-modal{
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 .geral{
     display: flex;
@@ -52,6 +57,7 @@ p{
     background: #ffffff;
     border-radius:3px;
     padding: 15px;
+    box-shadow:   0 3px 7px rgba(0, 0, 0, 0.3);;
 }
 .titles{
     display: flex;
