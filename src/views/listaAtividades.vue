@@ -17,8 +17,6 @@
       <Input type="date" placeholder="Data"/>
       <Botao mensagem="Filtrar" :style="'background: #3CB371'"/>
     </ContainerBotoes>
-    
-    <Paginacao />
 
     <table class="tabela" margin="10">
         
@@ -28,8 +26,11 @@
          <ItemTable paciente="Kael - The Invoker" cpf="09393675996" data="08/01/21" atividade="Verificar com o paciente se o remedio fez efeito" status="aberto"/>
          <ItemTable paciente="Kael - The Invoker" cpf="09393675996" data="08/01/21" atividade="Verificar com o paciente se o remedio fez efeito" status="aberto"/>
     </table>
+
+      <Paginacao />
     
   </div>
+
 
 </template>
 
@@ -57,7 +58,7 @@ export default {
 .tabela{
   background: white;
   width:90%;
-  margin: 0 auto;
+  margin: 20px auto;
   font-size: 14px;
   
 }
