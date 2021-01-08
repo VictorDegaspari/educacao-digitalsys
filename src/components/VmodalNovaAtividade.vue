@@ -1,16 +1,26 @@
 <template>
   <div class="geral" v-show="mostrarModalAtividade">
         <div class="modal"> 
-          <div class="titles"><p>Nova Atividade</p> <button class="close-modal">X</button>
+          <div class="titles"><p>Nova Atividade</p> <button class="close-modal">X</button></div>
+            <div>
+            <Input type="text" :style="'width:91%; margin: 0'" placeholder="Busque o paciente por nome ou cpf(autocomplete)"/>
+            <div class="input-modais">
+           <Input type="date"/> <Select/>
             </div>
-            <slot/>
+           <textarea name="" id="" cols="50" rows="6" placeholder="Atividade"></textarea>
+            </div>
         </div>
   </div>
 </template>
 
 <script>
-
+import Input from '@/components/Vinput.vue'
+import Select from '@/components/Vselect.vue'
 export default {
+    components:{
+Input,
+Select
+    },
   
     Props:{
         mostrarModalAtividade :{
@@ -56,13 +66,17 @@ p{
 }
 .modal{
     min-width: 450px;
-    height: 100px;
+    height: auto;
     background: #ffffff;
     border-radius:3px;
     padding: 15px;
     box-shadow:   0 3px 7px rgba(0, 0, 0, 0.3);;
 }
 .titles{
+    display: flex;
+    justify-content: space-between;
+}
+.input-modais{
     display: flex;
     justify-content: space-between;
 }
