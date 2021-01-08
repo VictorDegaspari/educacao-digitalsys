@@ -8,7 +8,7 @@
       <p>Lista de Atividades</p>
       <div>
       <Botao @click.prevent="modalNovoPaciente" mensagem="Novo Paciente" :style="'background: #3CB371'"/>
-      <Botao @click.prevent="modalNovoPaciente" mensagem="Nova Atividade" :style="'background: #3CB371'"/>
+      <Botao @click.prevent="modalNovaAtividade" mensagem="Nova Atividade" :style="'background: #3CB371'"/>
       </div>
    </ContainerBotoes>
     <ContainerBotoes :style="'background: #FFF0F5'">
@@ -32,6 +32,9 @@
       <Input type="text" placeholder="Nome"/>
       <Botao mensagem="Cadastrar" :style="'background: #3CB371'"/>      
       </Modal>
+      
+      <ModalAtividade tituloContent="alo" v-show="mostrarModalAtividade"/>
+      
     <Paginacao/>
   </div>
 
@@ -45,7 +48,8 @@ import Paginacao from '@/components/Vpaginacao.vue'
 import Input from '@/components/Vinput.vue'
 import ItemTable from '@/components/VitemTable.vue'
 import TituloTable from '@/components/VtituloTable.vue'
-import Modal from '@/components/Vmodal.vue';
+import Modal from '@/components/VmodalNovoPaciente.vue';
+import ModalAtividade from '@/components/VmodalNovaAtividade.vue';
 
 export default {
   components: {
@@ -55,17 +59,22 @@ export default {
     Input,
     ItemTable,
     TituloTable,
-    Modal
+    Modal,
+    ModalAtividade
   },
   data() {
     return {
       mostrarModal: false,
+      mostrarModalAtividade: false,
       tituloContent : String
       };
   },
   methods: {
     modalNovoPaciente(){
       this.mostrarModal = true
+    },
+     modalNovaAtividade(){
+      this.mostrarModalAtividade = true
     }
     
     },
