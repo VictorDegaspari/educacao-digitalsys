@@ -28,7 +28,7 @@
          <ItemTable paciente="Kael - The Invoker" cpf="09393675996" data="08/01/21" atividade="Verificar com o paciente se o remedio fez efeito" status="aberto"/>
          <ItemTable paciente="Kael - The Invoker" cpf="09393675996" data="08/01/21" atividade="Verificar com o paciente se o remedio fez efeito" status="aberto"/>
     </table>
-    
+    <Modal v-show="mostrarModal"/>
   </div>
 
 </template>
@@ -40,6 +40,7 @@ import Paginacao from '@/components/Vpaginacao.vue'
 import Input from '@/components/Vinput.vue'
 import ItemTable from '@/components/VitemTable.vue'
 import TituloTable from '@/components/VtituloTable.vue'
+import Modal from '@/components/Vmodal.vue';
 
 export default {
   components: {
@@ -47,6 +48,9 @@ export default {
     ContainerBotoes,
     Paginacao,
     Input,
+    ItemTable,
+    TituloTable,
+    Modal
   },
   data() {
     return {
@@ -60,9 +64,6 @@ export default {
     }
     
     },
-
-    ItemTable,
-    TituloTable,
   }
 
 </script>
