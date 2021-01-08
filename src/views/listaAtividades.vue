@@ -12,27 +12,30 @@
       </div>
    </ContainerBotoes>
     <ContainerBotoes :style="'background: #FFF0F5'">
-      <Botao @click.prevent="" mensagem="CPF do Paciente" :style="'background: #ffffff'"/>
-      <Botao mensagem="Status do Aprazamento" :style="'background: #ffffff'"/>
-      <Botao mensagem="Data" :style="'background: #ffffff'"/>
+      <Input type="text" placeholder="CPF do Paciente"/>
+      <Input type="text" placeholder="Status do Aprazamento"/>
+      <Input type="date" placeholder="Data"/>
       <Botao mensagem="Filtrar" :style="'background: #3CB371'"/>
     </ContainerBotoes>
-
+    
     <Paginacao />
-
+    
   </div>
+
 </template>
 
 <script>
 import Botao from '@/components/Vbotao.vue'
 import ContainerBotoes from '@/components/VcontainerBotoes.vue'
 import Paginacao from '@/components/Vpaginacao.vue'
+import Input from '@/components/Vinput.vue'
 
 export default {
   components: {
     Botao,
     ContainerBotoes,
     Paginacao,
+    Input
   }
 }
 </script>
