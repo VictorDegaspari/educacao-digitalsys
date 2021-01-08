@@ -1,7 +1,7 @@
 <template>
   <div>
     <ContainerBotoes :style="'background: #ffff; justify-content: space-between'">
-      <p>Amparo Saúde</p> <p>Atividades</p>
+      <p>Amparo Saúde</p> <p class="atividade">Atividades</p>
    </ContainerBotoes>
 
     <ContainerBotoes :style="'background: gray; justify-content: space-between'">
@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .tabela{
   background: white;
   width:90%;
@@ -70,6 +70,7 @@ export default {
   font-weight: 700;
 }
 
-
-
+.atividade{
+  border-bottom: 1px solid green;
+}
 </style>
