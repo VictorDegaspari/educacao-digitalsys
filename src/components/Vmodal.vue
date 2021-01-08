@@ -54,6 +54,7 @@ p{
     height: 100px;
     background: #ffffff;
     border-radius:3px;
+    padding: 15px;
 }
 .titles{
     display: flex;
