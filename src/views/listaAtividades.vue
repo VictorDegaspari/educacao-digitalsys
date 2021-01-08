@@ -7,8 +7,8 @@
     <ContainerBotoes :style="'background: gray; justify-content: space-between'">
       <p>Lista de Atividades</p>
       <div>
-      <Botao mensagem="Novo Paciente" :style="'background: #3CB371'"/>
-      <Botao @click.prevent="show()"  mensagem="Nova Atividade" :style="'background: #3CB371'"/>
+      <Botao @click.prevent="modalNovoPaciente" mensagem="Novo Paciente" :style="'background: #3CB371'"/>
+      <Botao @click.prevent="modalNovoPaciente" mensagem="Nova Atividade" :style="'background: #3CB371'"/>
       </div>
    </ContainerBotoes>
     <ContainerBotoes :style="'background: #FFF0F5'">
@@ -17,6 +17,8 @@
       <Input type="date" placeholder="Data"/>
       <Botao mensagem="Filtrar" :style="'background: #3CB371'"/>
     </ContainerBotoes>
+    <ModalNovo title="Nova Atividade"  v-show="mostrarModal"/>
+    <Paginacao />
 
     <table class="tabela" margin="10">
         
@@ -48,10 +50,24 @@ export default {
     ContainerBotoes,
     Paginacao,
     Input,
+  },
+  data() {
+    return {
+      mostrarModal: false,
+      title : String
+      };
+  },
+  methods: {
+    modalNovoPaciente(){
+      this.mostrarModal = true
+    }
+    
+    },
+
     ItemTable,
     TituloTable,
   }
-}
+
 </script>
 
 <style>

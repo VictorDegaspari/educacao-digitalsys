@@ -18,6 +18,7 @@ button{
     border-radius: 3px;
     border: 1px solid;
     margin-right: 8px;
+    cursor: pointer;
 }
 </style>
 
