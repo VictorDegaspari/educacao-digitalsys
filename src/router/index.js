@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import listaAtividades from "../views/listaAtividades.vue";
 
+
 const routes = [
   {
     path: "/",

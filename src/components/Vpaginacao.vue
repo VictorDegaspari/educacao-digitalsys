@@ -1,13 +1,12 @@
 <template>
   <div class="overflow-auto pagination">
-    <span class="material-icons">icone</span>
+    <font-awesome-icon :icon="['faAngleLeft']" />
     <p class="selected">1</p>
     <p>2</p>
     <p>3</p>
     <p>4</p>
     <p>5</p>
-    <span class="material-icons"> icone </span>
-    <!-- <i class="fas fa-angle-right"></i> -->
+    <font-awesome-icon :icon="['faAngleRight']" />
    
   </div>
 </template>
@@ -50,4 +49,5 @@
     padding: 5px 15px;
     margin: 0 2px;
   }
+
 </style>
