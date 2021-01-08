@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .tabela{
   background: white;
   width:90%;
